@@ -43,7 +43,8 @@ ol { margin-left: 36px; }
 
 
 #video-controls { width: 333px; }
-#video-controls a { color: #ddd; text-decoration: underline; }
+#video-controls a { color: #8b8b83; } 
+#video-controls a:hover { color: #ddd; text-decoration: underline; }
 
 
 /*
@@ -55,7 +56,8 @@ ol { margin-left: 36px; }
 
 .black-15 { background: url(../media/black-15-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
 .black-35 { background: url(../media/black-35-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
-.black-50 { background: url(../media/black-50-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
+.black-50 { background: url(../media/black-50-trans.png); color: #8b8b83; padding: 4px 12px; margin: 24px 0; }
+.black-50:hover { background: url(../media/black-50-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
 .black-65 { background: url(../media/black-65-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
 .black-85 { background: url(../media/black-85-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
 
