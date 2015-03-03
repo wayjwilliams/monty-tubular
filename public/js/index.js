@@ -20,5 +20,5 @@ $('document').ready(function() {
   videoIdArray[17] = 'M_eYSuPKP3Y';
   videoIdArray[18] = 'j1viagZK2-Q';
 
-	$('#wrapper').tubular({videoId: videoIdArray, start: 9, repeat: false});
+	$('#wrapper').tubular({videoId: videoIdArray, start: 0, repeat: false});
 });
