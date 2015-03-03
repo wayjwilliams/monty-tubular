@@ -12,12 +12,14 @@
 
 ;(function ($, window) {
 
-    // test for feature support and return if failure
+    // set the default video array
+    var defaultVideoArray = new Array();
+    defaultVideoArray[0] = 'kQFKtI6gn9Y'; //default at [0]
 
     // defaults
     var defaults = {
-        ratio: 16/9, // usually either 4/3 or 16/9 -- tweak as needed
-        videoId: 'kQFKtI6gn9Y',
+        ratio: 16/9,
+        videoId: defaultVideoArray,
         mute: false,
         repeat: false,
         width: $(window).width(),
@@ -28,9 +30,7 @@
         volumeUpClass: 'tubular-volume-up',
         volumeDownClass: 'tubular-volume-down',
         increaseVolumeBy: 10,
-        start: 0,
-        videoQuality: 'hd1080',
-        relatedVideos: 0
+        start: 0
     };
 
     // methods
@@ -39,6 +39,17 @@
         var options = $.extend({}, defaults, options),
             $body = $('body') // cache body node
             $node = $(node); // cache wrapper node
+
+    var randomIdStart = 0;
+    var randomIdEnd = 0;
+
+    if( Object.prototype.toString.call( options.videoId) === '[object Array]' ) {
+      randomIdEnd = options.videoId.length;
+    } else {
+      alert ( 'videoId is not a legal object array, please give me an array' );
+    }
+
+    var randomId = (Math.floor(Math.random()*randomIdEnd));
 
         // build container
         var tubularContainer = '<div id="tubular-container" style="overflow: hidden; position: fixed; z-index: 1; width: 100%; height: 100%"><div id="tubular-player" style="position: absolute"></div></div><div id="tubular-shield" style="width: 100%; height: 100%; z-index: 2; position: absolute; left: 0; top: 0;"></div>';
@@ -54,14 +65,13 @@
             player = new YT.Player('tubular-player', {
                 width: options.width,
                 height: Math.ceil(options.width / options.ratio),
-                videoId: options.videoId,
+                videoId: options.videoId[randomId],
                 playerVars: {
                     controls: 0,
                     showinfo: 0,
                     modestbranding: 1,
                     wmode: 'transparent',
-                    vq: options.videoQuality,
-                    rel: options.relatedVideos
+
                 },
                 events: {
                     'onReady': onPlayerReady,
@@ -80,6 +90,9 @@
         window.onPlayerStateChange = function(state) {
             if (state.data === 0 && options.repeat) { // video ended and repeat option is set true
                 player.seekTo(options.start); // restart
+            } else if (state.data === 0) {
+                var randomId = (Math.floor(Math.random()*randomIdEnd));
+                player.loadVideoById({videoId: options.videoId[randomId], startSeconds: options.start});
             }
         }
 
