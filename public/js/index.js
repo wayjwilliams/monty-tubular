@@ -21,6 +21,8 @@ $('document').ready(function() {
   videoIdArray[18] = 'j1viagZK2-Q';
 	videoIdArray[19] = 'vt0Y39eMvpI';
 	videoIdArray[20] = 'mL7n5mEmXJo';
+	videoIdArray[21] = 'MqObJtGrKaA';
+	videoIdArray[22] = 'U01xasUtlvw';
 
 	$('#wrapper').tubular({videoId: videoIdArray, start: 0, repeat: false});
 });
