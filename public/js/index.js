@@ -7,7 +7,7 @@ $('document').ready(function() {
   videoIdArray[4] = 'KDPTC-yAmgo';
   videoIdArray[5] = 'bK6hFk8jtvo';
   videoIdArray[6] = 'ZJE7uJyHJ3k';
-  videoIdArray[7] = 'YXzubuENjHk';
+  videoIdArray[7] = 'Qvk2wNWmB20';
   videoIdArray[8] = '3O1rHYWH8MY';
   videoIdArray[9] = 'heskWNMUqC8';
   videoIdArray[10] = 'npjOSLCR2hE';
@@ -23,6 +23,8 @@ $('document').ready(function() {
 	videoIdArray[20] = 'mL7n5mEmXJo';
 	videoIdArray[21] = 'MqObJtGrKaA';
 	videoIdArray[22] = 'U01xasUtlvw';
+	videoIdArray[23] = 'ifmRgQX82O4';
+	videoIdArray[24] = 'Qvk2wNWmB20';
 
 	$('#wrapper').tubular({videoId: videoIdArray, start: 0, repeat: false});
 });
