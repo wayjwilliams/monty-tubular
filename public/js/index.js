@@ -25,6 +25,9 @@ $('document').ready(function() {
 	videoIdArray[22] = 'U01xasUtlvw';
 	videoIdArray[23] = 'ifmRgQX82O4';
 	videoIdArray[24] = 'Qvk2wNWmB20';
+	videoIdArray[25] = 'RicaXxiU1WM';
+	videoIdArray[26] = 'lefP0_ZM-Lw';
+	videoIdArray[27] = '9ZlBUglE6Hc';
 
 	$('#wrapper').tubular({videoId: videoIdArray, start: 0, repeat: false});
 });
